@@ -174,7 +174,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"roll",
-"speed": 20.0
+"speed": 28.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -248,6 +248,7 @@ script = ExtResource("3_xsk7q")
 shape = SubResource("CircleShape2D_lyy8l")
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
 one_shot = true
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
