@@ -11,7 +11,6 @@ const JUMP_SPEED = 140.0
 const JUMP_DURATION = 0.15
 # This is the terminal velocity, or max fall speed.
 const MAX_FALL_SPEED = 500.0 
-# --- OLD JUMP CONSTANTS REMOVED ---
 
 @onready var Anim = $AnimatedSprite2D
 @onready var roll_cooldown_timer = $Timer
