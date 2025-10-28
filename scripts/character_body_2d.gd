@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 const SPEED = 100.0
 const TURN_ACCELERATION = 1200.0
-const ROLL_SPEED = 160.0
+const ROLL_SPEED = 140.0
 
 # --- NEW JUMP CONSTANTS ---
 # This is the constant upward speed of the "jetpack" jump.

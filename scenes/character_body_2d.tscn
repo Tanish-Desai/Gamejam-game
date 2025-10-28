@@ -174,7 +174,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"roll",
-"speed": 28.0
+"speed": 21.0
 }, {
 "frames": [{
 "duration": 1.0,
