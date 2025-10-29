@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://30uy4w2s4mji"]
 
-[ext_resource type="Script" path="res://scenes/deadzone.gd" id="1_816vj"]
+[ext_resource type="Script" uid="uid://b4foqmhc6bn6x" path="res://scenes/deadzone.gd" id="1_816vj"]
 
 [node name="Deadzone" type="Node2D"]
 script = ExtResource("1_816vj")

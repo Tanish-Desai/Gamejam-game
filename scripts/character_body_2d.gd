@@ -15,6 +15,9 @@ const MAX_FALL_SPEED = 500.0
 @onready var Anim = $AnimatedSprite2D
 @onready var roll_cooldown_timer = $Timer
 
+# --- DEATH VARIABLE ---
+var is_dying = false
+
 # Using a floaty gravity for the fall
 var gravity = 980
 var direction_stack = []
@@ -117,7 +120,9 @@ func _physics_process(delta):
 	elif direction == 1:
 		Anim.flip_h = false
 
-	if is_rolling:
+	if is_dying:
+		Anim.play("death")
+	elif is_rolling:
 		if Anim.animation != "roll":
 			Anim.play("roll")
 	else:
@@ -138,4 +143,5 @@ func _on_animated_sprite_2d_animation_finished():
 
 
 func death():
-	$CollisionShape2D.disabled = true
+	is_dying = true
+	$CollisionShape2D.queue_free()
