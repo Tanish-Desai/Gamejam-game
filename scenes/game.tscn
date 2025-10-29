@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://bnn06wunucex"]
+[gd_scene load_steps=13 format=3 uid="uid://bnn06wunucex"]
 
 [ext_resource type="PackedScene" uid="uid://2wqhuhenwmuy" path="res://scenes/character_body_2d.tscn" id="1_cop46"]
 [ext_resource type="Texture2D" uid="uid://bj7ml6why1kw2" path="res://assets/sprites/platforms.png" id="2_orjhw"]
 [ext_resource type="Texture2D" uid="uid://b88l10xrriggx" path="res://assets/sprites/world_tileset.png" id="3_oleet"]
 [ext_resource type="PackedScene" uid="uid://4mlehahbgq5l" path="res://scenes/moving_platform.tscn" id="4_7hgbf"]
+[ext_resource type="PackedScene" uid="uid://30uy4w2s4mji" path="res://scenes/deadzone.tscn" id="5_salv6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dqmsw"]
 texture = ExtResource("2_orjhw")
@@ -487,6 +488,9 @@ _data = {
 "RESET": SubResource("Animation_ja6hg")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpnon"]
+size = Vector2(16, 48)
+
 [node name="Game" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_cop46")]
@@ -509,3 +513,12 @@ libraries = {
 "": SubResource("AnimationLibrary_d8dd8")
 }
 autoplay = "Movement"
+
+[node name="Deadzone" parent="." instance=ExtResource("5_salv6")]
+position = Vector2(116, -41)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deadzone/Area2D" index="0"]
+position = Vector2(-44, 1)
+shape = SubResource("RectangleShape2D_fpnon")
+
+[editable path="Deadzone"]

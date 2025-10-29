@@ -135,3 +135,7 @@ func _on_animated_sprite_2d_animation_finished():
 	if Anim.animation == "roll":
 		is_rolling = false
 		velocity.x = 0
+
+
+func death():
+	$CollisionShape2D.disabled = true
